@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "170008752489",
+    "project_id": "journeyjournal-db872",
+    "storage_bucket": "journeyjournal-db872.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170008752489:android:34fede216ef065fe828df8",
+        "android_client_info": {
+          "package_name": "com.ismt.journeyjournal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "170008752489-jckanegrtuo4jdv2ldsenmfg5j917ect.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBANsUk5IvHQ7UsCrkh6JCSUjicd-jYlnk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "170008752489-jckanegrtuo4jdv2ldsenmfg5j917ect.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JourneyDetailActivity"
+    android:padding="20dp">
+
+    <!--Back Button-->
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnBackJourneyDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@color/white"
+        android:src="@drawable/ic_back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <!--Layout Edit-Delete Action-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBackJourneyDetail"
+        android:orientation="horizontal"
+        android:id="@+id/layoutAction"
+
+        >
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:adjustViewBounds="true"
+            android:backgroundTint="@color/white"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_edit"
+            android:tooltipText="Edit"
+            android:elevation="3dp"
+            android:id="@+id/btnEditJourney"
+            />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:adjustViewBounds="true"
+            android:backgroundTint="@color/white"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_delete"
+            android:tooltipText="Delete"
+            android:elevation="3dp"
+            android:id="@+id/btnDeleteJourney"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="40dp"
+            android:id="@+id/btnShare"
+            android:scaleType="centerInside"
+            android:elevation="3dp"
+            android:background="@drawable/ic_share"
+            android:adjustViewBounds="true"
+            android:backgroundTint="@color/blue"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+<!--Image-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutAction"
+        android:src="@drawable/ic_image"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:id="@+id/imageViewPicture"
+        />
+<!--Title-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPicture"
+        android:text="Journey Name"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/maroon"
+        android:id="@+id/textViewJourneyName"
+        />
+
+<!--Date-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewJourneyDate"
+        app:layout_constraintTop_toBottomOf="@+id/textViewJourneyName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="3/13/2022"
+        android:textColor="@color/dark_grey"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+<!--Description-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewJourneyDate"
+        android:layout_marginTop="20dp"
+        android:text="@string/lorem_ipsum"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        />
+
+<!--Location-->
+
+    <!--Location Picker-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescription">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location: "
+            android:textColor="@color/dark_grey"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lower Brule Unorganized Territory, SD, USA"
+            android:textColor="@color/dark_grey"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewLocation"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

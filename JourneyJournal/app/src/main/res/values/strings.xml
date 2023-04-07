@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">JourneyJournal</string>
+    <string name="addJournalHeading">Add New Journal</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis ex mattis, ultricies dui ut, luctus nibh. Mauris quis volutpat odio. Curabitur dolor orci, dictum eu arcu sed, consectetur ornare leo. Fusce semper fermentum odio eu ullamcorper. Cras eu hendrerit metus. Aliquam scelerisque enim purus, quis aliquam lacus cursus ullamcorper. Proin molestie dignissim varius.</string>
+    <string name="editJournalHeading">Edit Your Journey</string>
+    <string name="map_key" translatable="false">AIzaSyAFy5yqPks7unLvY479LNtrSUQ7yu4-WLU</string>
+
+</resources>

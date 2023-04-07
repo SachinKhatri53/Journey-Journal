@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginHorizontal="10dp">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutJourney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/grey"
+        android:paddingVertical="10dp"
+
+   >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/picture"
+            android:layout_width="100dp"
+            android:scaleType="centerCrop"
+            android:layout_height="90dp"
+android:paddingHorizontal="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_image" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/rounded_corners_profile"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mustang"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3/16/2022"
+                android:textSize="12sp"
+                android:textColor="@color/black"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/location"
+                android:text="Sauraha"
+                android:textSize="12sp"
+                android:textColor="@color/green"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.cardview.widget.CardView>

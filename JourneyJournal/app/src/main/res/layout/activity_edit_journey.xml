@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditJourneyActivity">
+
+
+    <!--Back Button-->
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnBackEditJourney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Page Heading-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/editJournalHeading"
+        android:textColor="@color/maroon"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBackEditJourney" />
+
+    <!--Title-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/labelTitle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:hint="Title"
+        app:boxStrokeColor="@color/maroon"
+        app:hintTextColor="@color/maroon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelHeading">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/maroon"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Description-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/labelDescription"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:hint="Description"
+        app:boxStrokeColor="@color/maroon"
+        app:hintTextColor="@color/maroon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:textColor="@color/maroon"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Image Picker-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutCamera"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelDescription">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewThumbnail"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_image" />
+
+        <!--Camera Button-->
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_camera"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--Date Picker-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutDatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutCamera">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="250dp"
+            android:id="@+id/labelDate"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:hint="Date"
+            app:boxStrokeColor="@color/maroon"
+            app:hintTextColor="@color/maroon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/maroon"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Date Picker Button-->
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnDatePicker"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:backgroundTint="@color/white"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_logo_brown"
+            android:tint="@color/maroon"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--Location Picker-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutDatePicker">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/labelLocation"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            app:boxStrokeColor="@color/maroon"
+            app:hintTextColor="@color/maroon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextLocation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/maroon"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Location Button-->
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnLocation"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_location"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--Add Button-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/maroon"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutMap"
+        android:id="@+id/btnUpdate"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
